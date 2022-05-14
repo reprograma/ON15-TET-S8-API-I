@@ -6,3 +6,4 @@
 
 - [GET] "/fimes/buscar/:nome" - retorn o filme com nome selecionado
 
+- [POST] "/fimes/cadastrat" - cadastra um novo filme
