@@ -1,7 +1,11 @@
 {
   "name": "servidor-em-aula",
   "version": "1.0.0",
+<<<<<<< HEAD
   "description": "pesquisa por título\r pesquisa por id\r retornar tudo",
+=======
+  "description": "- [GET] \"/filmes\" - retornar todos os filmes",
+>>>>>>> 9bfa55f61641bebbd6f122b1a3f972c0d46173e3
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
