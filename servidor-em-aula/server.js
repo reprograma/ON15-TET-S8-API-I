@@ -28,8 +28,8 @@ app.get("/filmes/buscar/:id", (request, response) => {
     
 })
 
-app.get("/filmes/filtro", (request, response) => {
-    let nomeRequest = request.query.titulo.toLocaleLowerCase()
+app.get("/filmes/buscarNome", (request, response) => {
+    let nomeRequest = request.query.title.toLowerCase()
 
     let filmeEncontrado = filmes.filter(filme => filme.title.toLowerCase().includes(nomeRequest))
     response.status(200).send(filmeEncontrado)
