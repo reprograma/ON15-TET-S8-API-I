@@ -1,4 +1,4 @@
-const filmes = require("./data/filmes.json")
+const filmes = require("./data/filmes.json");
 const series = require("./data/series.json")
 
 const express = require("express")
@@ -38,12 +38,19 @@ app.get("/series/buscar/:id", (request, response) => {
     response.status(200).send(serieEncontrada)
 
 })
-// app.get("/filmes/filtro", (request, response) => {
-//     let nomeRequest = request.query.titulo.toLocaleLowerCase()
+app.get("/filmes/buscarNome", (request, response) => {
+    let nomeRequest = request.query.title.toLowerCase()
 
-//     let filmeEncontrado = filmes.filter(filme => filme.title.toLowerCase().includes(nomeRequest))
-//     response.status(200).send(filmeEncontrado)
-// })
+    let filmeEncontrado = filmes.filter(filme => filme.Title.toLowerCase().includes(nomeRequest))
+    response.status(200).send(filmeEncontrado)
+})
+
+app.get("/series/buscarNome", (request, response) => {
+    let nomeRequest = request.query.title.toLowerCase()
+
+    let serieEncontrada = series.filter(serie => serie.title.toLowerCase().includes(nomeRequest))
+    response.status(200).send(serieEncontrada)
+})
 
 app.post("/filmes/cadastrar", (request, response) => {
     let bodyRequest = request.body
