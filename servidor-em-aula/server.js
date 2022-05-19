@@ -1,9 +1,7 @@
 //criar uma var para importar/requerir os dados do arquivo que estão em outra pasta e tbm n possui nome de var nela
 //o ./ trás arquivos da mesma linha de pastas (o ../ vai pra outras unidades)
 const filmesJson = require("./data/ghibli.json")
-
 const express = require("express")
-const { request } = require("express")
 const app = express()
 const cors = require("cors")
 
@@ -27,6 +25,8 @@ app.get("/filmes", (request, response)=>{
 })
 
 //fazer um filtro por id
+//adicionar os parametros que vão direto na rota de descrição da API
+//quando utiliza params as outras rotas devem ter caminhos diferentes, do contrário não funcionarão
 app.get("/filmes/buscar/:id", (request, response)=>{
     //recuperando o valor do id enviado na request
     let idRequest = request.params.id
@@ -40,20 +40,17 @@ app.get("/filmes/buscar/:id", (request, response)=>{
 })
 
 //fazer filtro por nome
-/* app.get("/filmes/buscar/:nome", (request, response)=>{
-    let nomeRequest = request.params.title
-    let filmeEncontrado = filmesJson.find(filme => filme.title == nomeRequest) 
+//o query possibilita buscas mais amplas (de textos, com espaços...)
+app.get("/filmes/porNome", (request, response)=>{
+    let nomeRequest = request.query.titulo.toLowerCase()
+    let filmeEncontrado = filmesJson.filter(filme => filme.title.toLowerCase().includes(nomeRequest)) 
 
     response.status(200).send(filmeEncontrado)
-
-    // console.log(nomeRequest)
-    // console.log(filmeEncontrado)
-
-}) */
+})
 
 
 //fazer cadastro (POST de criação)
-//não altera o arquivo original, a alteração é só temporário
+//não altera o arquivo original, a alteração é só temporária
 app.post("/filmes/cadastrar", (request, response)=>{
     let bodyRequest = request.body
     // console.log(bodyRequest)
@@ -64,14 +61,14 @@ app.post("/filmes/cadastrar", (request, response)=>{
         description: bodyRequest.description
     } */
     
-    //para alterar o id
+    //para alterar o id sem precisar informar o nº
     let novoFilme = {
         id: (filmesJson.length)+1,
         title: bodyRequest.title,
         description: bodyRequest.description
     }
 
-    // console.log(novoFilme)
+    console.log(novoFilme)
 
     //add um novo item num array
     filmesJson.push(novoFilme)

@@ -2,7 +2,7 @@
 const express = require("express") //não alterar como indicado no vscode) 
 const app = express() //executar express na var 
 
-//primeiro parm é a rota (pode ser sem texto "/" ou com algum nome "/nome"), no segundo função q recebe request e response: callback
+//primeiro param é a rota (pode ser sem texto "/" ou com algum nome "/nome"); segundo param função q recebe request e response: callback
 app.get("/", (request, response)=>{
     response.status(200).json(["tá rodando!"])
 })
