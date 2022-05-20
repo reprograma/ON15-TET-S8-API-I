@@ -38,6 +38,8 @@ app.get("/series/buscar/:id", (request, response) => {
     response.status(200).send(serieEncontrada)
 
 })
+
+
 app.get("/filmes/buscarNome", (request, response) => {
     let nomeRequest = request.query.title.toLowerCase()
 
@@ -101,6 +103,33 @@ app.post("/series/cadastrar", (request, response) => {
         novaSerie
     })
 })
+
+app.delete("/filmes/remover/:id", (request, response) => {
+    let idRequest = request.params.id
+    
+    let indexOfFilme = filmes.findIndex(item => { return item.id == idRequest})
+    
+
+    let filmeRemovido = filmes.splice(indexOfFilme, 1)
+    response.status(201).send({
+        "mensagem": "Filme removido com sucesso",
+        filmeRemovido
+    })
+
+})
+
+app.delete("/series/remover/:id", (request, response) => {
+    let idRequest = request.params.id
+    let indexOfSerie = series.findIndex(item => { return item.id == idRequest})
+
+    let serieRemovida = series.splice(indexOfSerie, 1)
+    response.status(201).send({
+        "mensagem": "Série removida com sucesso",
+        serieRemovida
+    })
+
+})
+.
 
 app.listen(8099, () => {
     console.log(" TOC TOC! Quem bate? É a porta! Que porta? A Porta 8099")
