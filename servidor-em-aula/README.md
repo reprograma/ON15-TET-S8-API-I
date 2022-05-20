@@ -6,4 +6,4 @@
 
 - [GET] "/filmes/buscar/:nome" - retorna filme com nome selecionado
 
-- [POST] "/filmes/cadastrat" - cadastra um novo filme
+- [POST] "/filmes/cadastrar" - cadastra um novo filme

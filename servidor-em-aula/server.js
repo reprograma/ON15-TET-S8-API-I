@@ -20,7 +20,7 @@ app.get("/filmes", (request, response) => {
 })
 
 app.get("/filmes/buscar/:id", (request, response) => {
-    //recuperando o valor do id enviado na request
+    //recuperando o valor do id enviado na request, usando path params
     let idRequest = request.params.id
 
     //array.find(elemento => comparação)
@@ -30,11 +30,12 @@ app.get("/filmes/buscar/:id", (request, response) => {
     response.status(200).send(filmeEncontrado)
 })
 
-app.get("/filmes/buscar/:nome", (request, response) => {
-    let nomeRequest = request.params.title
-    let nomeEncontrado = filmesJson.find(filme => filme.title == nomeRequest)
+app.get("/filmes/filtro", (request, response) => {
+    //recuperando a string (nome do filme) usando query params
+    let tituloRequest = request.query.titulo.toLowerCase()
+    let tituloEncontrado = filmesJson.filter(filme => filme.title.toLowerCase().includes(tituloRequest))
 
-    response.status(200).send(nomeEncontrado)
+    response.status(200).send(tituloEncontrado)
 })
 
 app.post("/filmes/cadastrar", (request, response) => {
