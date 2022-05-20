@@ -1,0 +1,16 @@
+{
+  "name": "meu-primeiro-servidor",
+  "version": "1.0.0",
+  "description": "meu primeiro servidor para ver como funcionam os servidores com node.js",
+  "main": "nodemon server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "Luiza Tempobono",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
+  }
+}
