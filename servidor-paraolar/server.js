@@ -1,5 +1,3 @@
-//  Resolução exercício filmes
-
 const filmesJson = require("./data/filmes.json")
 
 
@@ -41,22 +39,6 @@ app.get("/filmes/encontrar",(request, response) => {
 })
 
 
-app.get("/filmes/buscar/:nome",(request, response) => {
-
-    let nomeRequest = request.params.Title
-
-    let burcarFilme = filmesJson.filter(filmes => {
-        if (filmes.Title == nomeRequest){
-            response.status(200).send(burcarFilme)
-
-        }else{
-            response.status(400)
-        }
-    
-  })
-
-})
-
 
 app.post("/filmes/cadastrar", (request, response) => {
 
@@ -85,33 +67,14 @@ app.post("/filmes/cadastrar", (request, response) => {
 
     response.status(201).send({
         "mensagem": "Filmes cadastrado com sucesso",
-        filmesJson
+        novoFilme
     })
 })
 
 
 
-app.listen(8060, () =>{
-    console.log("meu servidor está rodando na porta 8060")
-}) 
-
-
-
-//  Resolução exercício serie
-
-
-
 const seriesJson = require("./data/series.json")   
 
-
-const express = require("express")   
-const cors = require("cors")        
-
-
-const app = express()
-
-app.use(express.json())
-app.use(cors())
 
 app.get("/series", (request, response) => {
     response.status(200).send(seriesJson)
@@ -165,7 +128,7 @@ app.post("/series/cadastrar", (request, response) => {
 
 
 
-app.listen(5050, () =>{
-    console.log("meu servidor está rodando na porta 5050")
+app.listen(8060, () =>{
+    console.log("meu servidor está rodando na porta 8060")
 }) 
   
