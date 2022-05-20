@@ -6,20 +6,26 @@ const cors = require("cors")
 const app = express()
 
 app.use(cors())
+
 app.use(express.json()) //fazendo o body parser
+
 
 
 app.get("/", (request, response)=>{
     response.status(200).json([
         {
+
             "mensagem": "API de filmes Ghibli"
+
         }
     ])
 })
 
+
 app.get("/filmes", (request, response)=>{
     response.status(200).send(filmesJson)
 })
+
 
 app.get("/filmes/buscar/:id", (request, response)=>{
     //recuperando o valor do id enviado na request
@@ -27,11 +33,13 @@ app.get("/filmes/buscar/:id", (request, response)=>{
                              //ARRAY.find(elemento => comparação)
                              //encontre um filme dentro do filmes Json
                              //cujo id do filme seja igual ao id do request
+
     let filmeEncontrado = filmesJson.find(filme => filme.id == idRequest)
 
     response.status(200).send(filmeEncontrado)
 
 })
+
 
 
 app.post("/filmes/cadastrar", (request, response)=>{
@@ -52,4 +60,5 @@ app.post("/filmes/cadastrar", (request, response)=>{
 
 app.listen(3030, ()=>{
     console.log("alô, pepe moreno? tô na porta 3030")
+
 })
