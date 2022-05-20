@@ -31,30 +31,9 @@ app.get("/filmes/buscar/:id", (request, response) => {
     let filmeEncontrado = filmesJson.find(filme => filme.id == idRequest)
 
     response.status(200).send(filmeEncontrado)
-
 })
 
 app.use(express.json())
-
-
-//4 - rota de séries
-app.get("/series", (request, response) => {
-    response.status(200).send(seriesJson)
-})
-
-//5 - rota do id séries selecionadas
-app.get("/series/buscar/:id", (request, response) => {
-
-    let idRequest = request.params.id
-
-    let serieEncontrada = seriesJson.find(serie => serie.id == idRequest)
-
-    response.status(200).send(serieEncontrada)
-
-})
-
-app.use(express.json())
-
 
 //filmes por título
 app.get("/filmes/filtro", (request, response) => {
@@ -64,18 +43,6 @@ app.get("/filmes/filtro", (request, response) => {
     let filmeEncontrado = filmesJson.filter(filme => filme.Title.toLowerCase().includes(tituloRequest))
 
     response.status(200).send(filmeEncontrado)
-
-})
-
-
-//séries por título
-app.get("/series/filtro", (request, response) => {
-    let tituloRequest = request.query.titulo.toLowerCase()
-
-    let serieEncontrada = seriesJson.filter(serie => serie.title.toLowerCase().includes(tituloRequest))
-
-    response.status(200).send(serieEncontrada)
-
 })
 
 //cadastrar filmes
@@ -101,10 +68,37 @@ app.post("/filmes/cadastrar", (request, response) => {
     filmesJson.push(novoFilme)
 
     response.status(201).send({
-        "mensagem": "Filme cadastrado com sucesso!", 
+        "mensagem": "Filme cadastrado com sucesso!",
         novoFilme
     })
+})
 
+
+//4 - rota de séries
+app.get("/series", (request, response) => {
+    response.status(200).send(seriesJson)
+})
+
+//5 - rota do id séries selecionadas
+app.get("/series/buscar/:id", (request, response) => {
+
+    let idRequest = request.params.id
+
+    let serieEncontrada = seriesJson.find(serie => serie.id == idRequest)
+
+    response.status(200).send(serieEncontrada)
+
+})
+
+app.use(express.json())
+
+//séries por título
+app.get("/series/filtro", (request, response) => {
+    let tituloRequest = request.query.titulo.toLowerCase()
+
+    let serieEncontrada = seriesJson.filter(serie => serie.title.toLowerCase().includes(tituloRequest))
+
+    response.status(200).send(serieEncontrada)
 
 })
 
@@ -113,7 +107,7 @@ app.post("/series/cadastrar", (request, response) => {
     let bodyRequest = request.body
 
     let novaSerie = {
-        "id": (seriesJson.length)+1,
+        "id": (seriesJson.length) + 1,
         "title": bodyRequest.title,
         "totalSeasons": bodyRequest.totalSeasons,
         "genre": bodyRequest.genre,
@@ -126,7 +120,7 @@ app.post("/series/cadastrar", (request, response) => {
 
     response.status(201).send({
         "mensagem": "Série cadastrada com sucesso!",
-        novaSerie, 
+        novaSerie,
     })
 
 
