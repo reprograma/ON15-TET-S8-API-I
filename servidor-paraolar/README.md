@@ -8,9 +8,9 @@
 
 [GET] "/series/buscar/:id" - retorna a série com id selecionado
 
-[GET] "/filmes/buscartitulo/:title" > "/filmes/filtro" - retorna filme com nome selecionado
+[GET] "/filmes/buscartitulo/:title" - retorna filme com nome selecionado
 
-[GET] "/series/buscartitulo/:title" > "/series/filtro" - retorna série com nome selecionado
+[GET] "/series/buscartitulo/:title" - retorna série com nome selecionado
 
 [POST] "/filmes/cadastrar" - cadastra um novo filme
 
