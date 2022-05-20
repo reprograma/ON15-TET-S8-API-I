@@ -1,0 +1,26 @@
+{
+  "name": "on15-tet-s8-api-i",
+  "version": "1.0.0",
+  "description": "primeiro servidor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+ 
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dayaneoli/ON15-TET-S8-API-I.git"
+
+  },
+  "author": "Dayane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dayaneoli/ON15-TET-S8-API-I/issues"
+  },
+  "homepage": "https://github.com/dayaneoli/ON15-TET-S8-API-I#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
+  }
+}
