@@ -57,7 +57,7 @@ app.delete("/filmes/remover/:id", (request, response) => {
 
     let filmeRemovido = filmes.splice(indexOfFilme, 1)
     response.status(201).send({
-        "mensagem": "Série removida com sucesso",
+        "mensagem": "Filme removido com sucesso",
         filmeRemovido
     })
 
