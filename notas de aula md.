@@ -1,0 +1,69 @@
+1 - Node.js - Utilizado para usar o JavaScript no back end
+
+2 - Gerenciador de banco de dados
+npm: Gerenciador de banco de dados criado pelo node.js
+iarn: Gerenciador de banco de dador criado pelo facebook, que agora é META
+
+obs.: touch nome do arquivo --> cria um novo arquivo
+no terminal: npm init -y --> para iniciar npm 
+
+3 - Dependencias
+
+package.json: Arquivo criado atraves do npm init -y
+ele é o ponto de partida de qualquer projeto node.js
+
+express: é a forma mais simples de criar um node. vou precisar disso para meu projeto funcionar
+para ter o express no projeto devo colocar o comando no terminal: npm install express
+
+pacotes são arquivos dependentes. 
+node_modules estão baiaxadas todas as dependentes
+
+criar um extensão para ignorar todos os aquivos da modules e deixar menos arquivos para subir no git
+touch .gitignore
+no arquivo .gitignore escrever: node_modules 
+no arquivo .gitignore eu posso colocar todos os arquivos que eu quero ignorar
+
+para voltar os arquivos basta colocar: npm install --> e isso faz com que volte novamente todos os arquivos
+se eu abrir um projeto que tenha package-lock.json e package.json, mas não tem node_modules, 
+eu preciso fazer o npm install para ter as dependencias do projeto e conseguir rodar o projeto.
+
+para subir o projeto no git podemos ignorar o node_modules mas para rodar o projeto NÃO POSSO IGNORAR. 
+
+4 - API Rest 
+porta 
+rota
+http response
+response
+
+//confirgurar uma porta, com a função listen que é do próprio express, "8080 - é porque deve ser um númeor mair que 3k", "8080 é a porta".
+//É indicado usar portas acima de 3k porque até os 3k são portas que estão no meu computador.
+//toda porta tem que abrir e fehcar, se estiver usando uma porta que ainda está aberta, serei avisada.
+
+nodemon serve para reestartar o projeto 
+para instalar: npm i nodemon
+Depois disso vai aparecer nodemon no package.json
+ai no start eu coloco nodemon
+
+para matar a porta ctrl+c
+
+params são informações 
+
+4.1 - Post 
+
+- body parse: o body vem com as informações toda quebrada, o parse ele organiza as informações e transforma no JSOON
+- na aula usamos body para cadastrar um novo filme.
+
+CORS: é uma especificação que permite que um site acesse recursos de outro site mesmo estando em domínios diferentes
+muitas vezes meu computador barra requisições que não são do mesmo navegador, por isso usamos o CORS
+
+
+5 - Exercio para casa 
+
+- fazer o mesmo que fizemos em aula, mas para filmes e séries.
+- fazer UM único servidor para os dois (filmes e séries).
+
+
+
+
+
+

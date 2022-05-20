@@ -1,0 +1,17 @@
+{
+  "name": "meu-primeiro-servidor",
+  "version": "1.0.0",
+  "description": "meu primeiro servidor, para verificar como servidores são faceis com node.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "CarolMarquezini",
+  "license": "ISC",
+  "keywords": [],
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
+  }
+}
