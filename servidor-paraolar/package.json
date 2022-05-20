@@ -1,0 +1,17 @@
+{
+  "name": "servidor-paraolar",
+  "version": "1.0.0",
+  "description": "A Web API de consulta de filmes e séries é resultado da atividade da Semana 08, dentro do curso Bootcamp da {Reprograma}, com o intuito de colocarmos em prática o conteúdo estudado na aula introdutória de criação de uma API RESTful simples com NODE.js.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "Geankre Souza",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
+  }
+}

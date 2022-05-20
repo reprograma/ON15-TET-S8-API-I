@@ -1,9 +1,14 @@
+//criar uma var para importar/requerir os dados do arquivo que estão em outra pasta e tbm n possui nome de var nela
+//./ trás arquivos da mesma linha de pastas ( ../ vai pra outras unidades)
 const filmesJson = require("./data/ghibli.json")
 
 const express = require("express")
 const cors = require("cors")
 
 const app = express()
+
+//criar var para automatizar alreação do nº da porta
+const PORT = 3030 //nome var em maiusculo = padrão do mercado
 
 app.use(cors())
 app.use(express.json()) //faz o parseamento do body(body parser)
@@ -35,7 +40,18 @@ app.get("/filmes/buscar/:id", (request, response)=>{
 
 })
 
+//fazer filtro por nome
+//o query params possibilita buscas mais amplas (de textos, com espaços...)
+app.get("/filmes/filtro", (request, response) => {
+    let tituloRequest = request.query.titulo.toLowerCase()
+    let filmeEncontrado = filmesJson.filter(
+        filme => filme.title.toLowerCase().includes(tituloRequest))
 
+    response.status(200).send(filmeEncontrado)
+})
+
+//fazer cadastro (POST de criação)
+//não altera o arquivo original, a alteração é só temporária
 app.post("/filmes/cadastrar", (request,response)=>{
     let bodyRequest = request.body
 
@@ -44,7 +60,7 @@ app.post("/filmes/cadastrar", (request,response)=>{
         title: bodyRequest.title, 
         description: bodyRequest.description 
     }
-    filmesJson.push(novoFilme)
+    filmesJson.push(novoFilme) //add um novo item num array
     
     response.status(201).send({
         "mensagem": "filmes cadastrado com sucesso",
@@ -53,6 +69,6 @@ app.post("/filmes/cadastrar", (request,response)=>{
 })
 
 
-app.listen(3030, ()=>{
-    console.log("alô, pepe moreno? to na porta 3030")
+app.listen(PORT, ()=>{
+    console.log(`alô, pepe moreno? to na porta ${PORT}`)
 })
