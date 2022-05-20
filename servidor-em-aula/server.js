@@ -51,6 +51,19 @@ app.post("/filmes/cadastrar", (request, response) => {
     })
 })
 
+app.delete("/filmes/remover/:id", (request, response) => {
+    let idRequest = request.params.id
+    let indexOfFilme = filmes.findIndex(item => { return item.id == idRequest})
+
+    let filmeRemovido = filmes.splice(indexOfFilme, 1)
+    response.status(201).send({
+        "mensagem": "Série removida com sucesso",
+        filmeRemovido
+    })
+
+})
+
+
 app.listen(8099, () => {
     console.log(" TOC TOC! Quem bate? É a porta! Que porta? A Porta 8099")
 }) 
