@@ -30,7 +30,7 @@ Durante a semana 8 do curso <a href="https://reprograma.com.br/" target="_blank"
 </div>
 <br>
 <div align = "justify">
-<p> Como meio aprimoramento, desenvolvi também o método <b>DELETE</b> (excluir), que remove um recurso específico.
+<p> Como meio de aprimoramento, desenvolvi também o método <b>DELETE</b> (excluir), que remove um recurso específico.
 </div>
 
 <div align = "justify">
