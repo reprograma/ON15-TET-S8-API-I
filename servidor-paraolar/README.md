@@ -7,7 +7,7 @@
 
 - [GET] "/series/buscar/:id" - retorna série com id selecionado
 
-- [GET] "/filmes/buscar/:nome" > "/series/filtro" - retorna filme com nome selecionado
+- [GET] "/filmes/buscar/:nome" > "/filmes/filtro" - retorna filme com nome selecionado
 
 - [GET] "/series/buscar/:nome" > "/series/filtro" - retorna série com nome selecionado
 
