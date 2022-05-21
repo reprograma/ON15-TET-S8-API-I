@@ -102,3 +102,38 @@ Para a criação de uma API RESTful simples, foi desenvolvido um <a href = "http
 </ul>
 </div>
 </div>
+
+<br>
+<div align = "Justify">
+
+# Referências
+
+|                          Título                           |                                                              Link                                                               |
+| :-------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------: |
+|                     API - GET & POST                      |https://github.com/reprograma/ON15-TET-S8-API-I/blob/main/material/API%20GET.pdf                         |
+| HTTP: GET e POST - Conheça as diferenças entre os métodos |https://www.alura.com.br/artigos/diferencas-entre-get-e-post                                   |
+|        Diferença entre o método GET e POST em HTML        |https://pt.gadget-info.com/difference-between-get                                        |
+|      Dependências de produção vs. de desenvolvimento      | https://tapmorales.gitbooks.io/workflow-front-end/content/turbinando-o-node/dependencias-de-producao-vs-de-desenvolvimento.html |
+|                       Package.json                        |https://tapmorales.gitbooks.io/workflow-front-end/content/turbinando-o-node/package-json.html                  |
+|                Métodos de requisição HTTP                 |https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods                                    |
+|                          express                          |https://www.npmjs.com/package/express                                              |
+|                           cors                            |https://www.npmjs.com/package/cors                                                |
+|                          nodemon                          |https://www.npmjs.com/package/nodemon           |
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
