@@ -125,10 +125,10 @@
 
 # Instalação
 
-1. Entre na pasta onde você deseja clonar o repositório, e abra o **git** nela. 
+1. Entre na pasta onde você deseja clonar o repositório. Abra o **git** nela e siga os seguintes passos: 
 
     ```bash
-    ~
+    
     $ git clone https://github.com/BrunaCelestino/ON15-TET-S8-API-I.git
     $ cd servidor-paraolar/
     $ npm install
@@ -151,7 +151,10 @@
             Utilizando "<b>npm start</b>", você iniciará o servidor; 
         </li>
         <li> 
-            No Postman, você pode acessar a coleção para teste desse servidor clicando <a href = "https://www.getpostman.com/collections/28fe8d47b9cc408d30eb"> aqui</a>!
+            Importe a coleção para teste deste servidor clicando <a href = "https://www.getpostman.com/collections/28fe8d47b9cc408d30eb"> aqui</a>!
+        </li>
+        <li> 
+            Copie o link acima e, no Postman, clique em <b>Import</b> -> <b> Link</b> (cole o link) -> <b>Continue</b> -> <b>Import</b>.
         </li>
     </ul>
 </div>
