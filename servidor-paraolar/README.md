@@ -9,7 +9,7 @@
 # Introdução
 
 <div align = "justify">
-<p>HTTP é um protocolo responsável pela comunicação de websites. Um website, ao ser acessado, recebe esse protocolo. Esse protocolo possui métodos, que também podem ser chamados de verbos. O protocolo baseado no modelo Client/Server, possui pedidos (requests) e respostas (responses) e é através desses requests e responses que a comunicação acontece. Os métodos HTTP, que definem que ação acontecerá, são: <b>GET, POST, PUT, PATCH</b> e <b> DELETE</b>.</p>
+<p>HTTP é um protocolo responsável pela comunicação de websites. Um website, ao ser acessado, recebe esse protocolo. Esse protocolo possui métodos, que também podem ser chamados de verbos. O protocolo baseado no modelo Client/Server, possui pedidos (requests) e respostas (responses) e é através desses requests e responses que a comunicação acontece. Os métodos HTTP, que definem qual ação acontecerá, são: <b>GET, POST, PUT, PATCH</b> e <b> DELETE</b>.</p>
 </div>
 
 <br>
@@ -17,7 +17,7 @@
 # Sobre o Projeto
 
 <div align = "justify">
-Durante a semana 8 do curso <a href="https://reprograma.com.br/"> <b style='color:purple'>{reprograma}</b></a>, foi desenvolvida uma <b> Web API</b> de <a href = "https://github.com/BrunaCelestino/ON15-TET-S8-API-I/blob/BrunaCelestino/servidor-paraolar/data/filmes.json"> filmes </a> e <a href = "https://github.com/BrunaCelestino/ON15-TET-S8-API-I/blob/BrunaCelestino/servidor-paraolar/data/series.json">séries</a>. O intuito dessa semana foi que as alunas aprendessem sobre os métodos <b>GET</b> e <b>POST</b>.
+Durante a semana 8 do curso <a href="https://reprograma.com.br/" target="_blank"> <b style='color:purple'>{reprograma}</b></a>, foi desenvolvida uma <b> Web API</b> de <a href = "https://github.com/BrunaCelestino/ON15-TET-S8-API-I/blob/BrunaCelestino/servidor-paraolar/data/filmes.json" target="_blank"> filmes </a> e <a href = "https://github.com/BrunaCelestino/ON15-TET-S8-API-I/blob/BrunaCelestino/servidor-paraolar/data/series.json" target="_blank">séries</a>. O intuito dessa semana foi que as alunas aprendessem sobre os métodos <b>GET</b> e <b>POST</b>.
 </div>
 <br>
 <div align = "center">
@@ -34,7 +34,7 @@ Durante a semana 8 do curso <a href="https://reprograma.com.br/"> <b style='colo
 </div>
 
 <div align = "justify">
-Para a criação de uma API RESTful simples, foi desenvolvido um <a href = "https://github.com/BrunaCelestino/ON15-TET-S8-API-I/blob/BrunaCelestino/servidor-paraolar/server.js"> servidor </a> simples com as seguintes rotas:
+Para a criação de uma API RESTful simples, foi desenvolvido um <a href = "https://github.com/BrunaCelestino/ON15-TET-S8-API-I/blob/BrunaCelestino/servidor-paraolar/server.js" target="_blank"> servidor </a> simples com as seguintes rotas:
 </div>
 <br>
 
@@ -69,15 +69,15 @@ Para a criação de uma API RESTful simples, foi desenvolvido um <a href = "http
 <div align = "justify">
 <ul>
 <li>
-<a href = "https://www.npmjs.com/package/express">Express </a> - framework para aplicativo da web do Node.js;
+<a href = "https://www.npmjs.com/package/express" target="_blank">Express </a> - framework para aplicativo da web do Node.js;
 </li>
 <br>
 <li>
-<a href = "https://www.npmjs.com/package/nodemon">Nodemon </a> - ajuda no desenvolvimento de sistemas com o Node. js reiniciando automaticamente o servidor;
+<a href = "https://www.npmjs.com/package/nodemon" target="_blank">Nodemon </a> - ajuda no desenvolvimento de sistemas com o Node. js reiniciando automaticamente o servidor;
 </li>
 <br>
 <li>
-<a href = "https://www.npmjs.com/package/cors">Cors </a> - permite que um site acesse recursos de outro site mesmo estando em domínios diferentes.
+<a href = "https://www.npmjs.com/package/cors" target="_blank">Cors </a> - permite que um site acesse recursos de outro site mesmo estando em domínios diferentes.
 </li>
 <br>
 </ul>
@@ -88,15 +88,15 @@ Para a criação de uma API RESTful simples, foi desenvolvido um <a href = "http
 <div align = "justify">
 <ul>
 <li>
-<a href = "https://github.com/BrunaCelestino/ON15-TET-S8-API-I/blob/BrunaCelestino/servidor-paraolar/package-lock.json">package-lock.json </a> - especifica a versão e suas dependências;
+<a href = "https://github.com/BrunaCelestino/ON15-TET-S8-API-I/blob/BrunaCelestino/servidor-paraolar/package-lock.json" target="_blank">package-lock.json </a> - especifica a versão e suas dependências;
 </li>
 <br>
 <li>
-<a href = "https://github.com/BrunaCelestino/ON15-TET-S8-API-I/blob/BrunaCelestino/servidor-paraolar/package.json">package.json </a> - arquivo de configuração utilizado para estipular e configurar dependências.;
+<a href = "https://github.com/BrunaCelestino/ON15-TET-S8-API-I/blob/BrunaCelestino/servidor-paraolar/package.json" target="_blank">package.json </a> - arquivo de configuração utilizado para estipular e configurar dependências;
 </li>
 <br>
 <li>
-<a href = "https://github.com/BrunaCelestino/ON15-TET-S8-API-I/blob/BrunaCelestino/servidor-paraolar/.gitignore">.gitignore </a> - arquivo que lista quais arquivos ou pastas o Git deve ignorar.
+<a href = "https://github.com/BrunaCelestino/ON15-TET-S8-API-I/blob/BrunaCelestino/servidor-paraolar/.gitignore" target="_blank">.gitignore </a> - arquivo que lista quais arquivos ou pastas o Git deve ignorar.
 </li>
 <br>
 </ul>
