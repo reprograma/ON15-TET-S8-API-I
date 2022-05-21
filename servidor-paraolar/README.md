@@ -9,7 +9,7 @@
 # Introdução
 
 <div align = "justify">
-<p>HTTP é um protocolo responsável pela comunicação de websites. Um website, ao ser acessado, recebe esse protocolo. Esse protocolo possui métodos, que também podem ser chamados de verbos. O protocolo baseado no modelo Client/Server, possui pedidos (requests) e respostas (responses) e é através desses requests e responses que a comunicação acontece. Os métodos HTTP, que definem que ação acontecerá, são: <b>GET, POST, PUT, PATCH</b> e <b> DELETE</b>.</p>
+<p>HTTP é um protocolo responsável pela comunicação de websites. Um website, ao ser acessado, recebe esse protocolo. Esse protocolo possui métodos, que também podem ser chamados de verbos. O protocolo baseado no modelo Client/Server, possui pedidos (requests) e respostas (responses) e é através desses requests e responses que a comunicação acontece. Os métodos HTTP, que definem qual ação acontecerá, são: <b>GET, POST, PUT, PATCH</b> e <b> DELETE</b>.</p>
 </div>
 
 <br>
