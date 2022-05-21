@@ -71,6 +71,14 @@
 
 <br>
 <div align = "justify">
+    <p>
+         Com essa web API, é possível consultar uma lista de filmes e séries onde, através do método GET, se recebe uma mensagem inicial e onde, através dele, também é possível fazer busca por todos os filmes e séries, busca por ID e busca por nome. Através do método POST é possível fazer o cadastramento de novos filmes e séries e, através do método DELETE, é possível deletar um filme ou série, buscando pelo ID.
+    </p>
+</div>
+
+<br>
+<br>
+<div align = "justify">
 
 # Dependências
 
