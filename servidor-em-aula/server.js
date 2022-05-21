@@ -23,6 +23,7 @@ app.get("/filmes", (request, response)=>{
 })
 
 
+
 app.get("/filmes/buscar/:id", (request, response)=>{
     //recuperando o valor do ID enviado na request
     let idRequest = request.params.id
@@ -34,8 +35,17 @@ app.get("/filmes/buscar/:id", (request, response)=>{
     response.status(200).send(filmeEncontrado)
 
 })
+//query params
+app.get("/filmes/filtro", (request, response)=>{
+    let tituloRequest = request.query.titulo.toLowerCase()
 
+    let filmeEncontrado = filmesJson.filter(
+        filme => filme.title.toLowerCase().includes(tituloRequest))
 
+    response.status(200).send(filmeEncontrado)
+})
+
+//APP.METODO("ROTA", (REQUEST, RESPONSE)=>{CODIGO})
 app.post("/filmes/cadastrar", (request,response)=>{
     let bodyRequest = request.body
 
