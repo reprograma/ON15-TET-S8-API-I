@@ -111,7 +111,7 @@ app.delete("/filmes/remover/:id", (request, response) => {
     
 
     let filmeRemovido = filmes.splice(indexOfFilme, 1)
-    response.status(201).send({
+    response.status(200).send({
         "mensagem": "Filme removido com sucesso",
         filmeRemovido
     })
@@ -123,13 +123,12 @@ app.delete("/series/remover/:id", (request, response) => {
     let indexOfSerie = series.findIndex(item => { return item.id == idRequest})
 
     let serieRemovida = series.splice(indexOfSerie, 1)
-    response.status(201).send({
+    response.status(200).send({
         "mensagem": "Série removida com sucesso",
         serieRemovida
     })
 
 })
-.
 
 app.listen(8099, () => {
     console.log(" TOC TOC! Quem bate? É a porta! Que porta? A Porta 8099")
