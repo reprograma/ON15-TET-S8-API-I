@@ -104,9 +104,26 @@ Para a criação de uma API RESTful simples, foi desenvolvido um <a href = "http
 </div>
 
 <br>
-<div align = "Justify">
+
+
+# Instalação
+
+    ```bash
+    ~
+    $ git clone https://github.com/BrunaCelestino/ON15-TET-S8-API-I.git
+    $ cd servidor-paraolar/
+    $ npm install
+    $ npm start
+    
+    ```
+
+<br>
+
+
 
 # Referências
+
+<div align = "center">
 
 |                          Título                           |                                                              Link                                                               |
 | :-------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------: |
