@@ -1,0 +1,4 @@
+npm init -y
+npm i express (para instalar a dependência express)
+npm i nodemon (instalar dependência nodemon)
+touch .gitignore (criar o arquivo)
