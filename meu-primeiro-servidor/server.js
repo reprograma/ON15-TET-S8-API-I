@@ -12,8 +12,8 @@ app.get("/ola", (request, response)=>{
 })
 
 //configurar porta//
-app.listen(8082, ()=>{    //criação da porta
-    console.log("Meu servidor ta rodadando na porta 8080!!)
+app.listen(8080, ()=>{    //criação da porta
+    console.log("Meu servidor ta rodadando na porta 8080!!")
 
 })
 
