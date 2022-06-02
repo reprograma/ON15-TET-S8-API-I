@@ -1,14 +1,19 @@
 const express = require("express")
 const app = express()
 
-app.get("/", (request, response)=>{
-    response.status(200).json(["Oi coisa linda"])
+app.get("/", (request, response) =>{
+
+
+    response.status(200).json("Está funcionando!")
 })
 
-app.get("/oi", (request, response)=>{
-    response.status(200).json(["oi princesa"])
+app.get("/informacoes", (request, response)=>{
+
+response.status(200).json("Meu nome é Maria Clara, tenho 22 anos e sou carioca!")
+
 })
 
-app.listen(8080, ()=>{
-    console.log("servidor rodando lindo na porta 8080")
+app.listen(3256, ()=>{
+
+    console.log("O servidor está rodando na porta 3256!")
 })

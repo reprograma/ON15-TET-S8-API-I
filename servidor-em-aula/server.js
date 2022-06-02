@@ -1,68 +1,56 @@
 const filmesJson = require("./data/ghibli.json")
-
 const express = require("express")
-const cors = require("cors")
-
 const app = express()
-
+const cors = require("cors")
 app.use(cors())
-app.use(express.json()) //faz o parseamento do body(body parser)
+app.use(express.json())
 
 
-app.get("/", (request, response)=>{
-    response.status(200).json([
-        {
-            "mensagem":"API de filmes Ghibli"
-        }
-    ])
+app.get("/filmes", (request, response) => {
+
+response.status(200).json(filmesJson)
+
+
 })
 
+app.get("/filmes/buscar/:id", (request, response) => {
 
-app.get("/filmes", (request, response)=>{
-    response.status(200).send(filmesJson)
-})
-
-
-
-app.get("/filmes/buscar/:id", (request, response)=>{
-    //recuperando o valor do ID enviado na request
-    let idRequest = request.params.id
-                        //ARRAY.find(elemento => comparaçao)
-                        //encontre um filme dentro do filmes Json
-                        //que o id do filme seja igual o id do request
-    let filmeEncontrado = filmesJson.find(filme => filme.id == idRequest)
-
-    response.status(200).send(filmeEncontrado)
+let idRequest = request.params.id
+let filmeEncontrado = filmesJson.find(filme => filme.id == idRequest)
+response.status(200).json(filmeEncontrado)
 
 })
-//query params
-app.get("/filmes/filtro", (request, response)=>{
-    let tituloRequest = request.query.titulo.toLowerCase()
 
-    let filmeEncontrado = filmesJson.filter(
-        filme => filme.title.toLowerCase().includes(tituloRequest))
+app.get("/filmes/filtro", (request, response) => {
 
-    response.status(200).send(filmeEncontrado)
+let titleRequest = request.query.title.toLowerCase()
+
+let filmeEncontrado = filmesJson.filter(filme => filme.title.toLowerCase().includes(titleRequest))
+
+response.status(200).json(filmeEncontrado)
+
+app.post("/filmes/cadastrar", (request, response)=>{
+
+let bodyRequest = request.body
+
+let novoFilme = {
+id: (filmesJson.length)+1,
+title: bodyRequest.title,
+description: bodyRequest.description
+
+}
+filmesJson.push(novoFilme)
+response.status(201).json({
+
+    mensagem: "filme cadastrado com sucesso!",
+    novoFilme
+
 })
 
-//APP.METODO("ROTA", (REQUEST, RESPONSE)=>{CODIGO})
-app.post("/filmes/cadastrar", (request,response)=>{
-    let bodyRequest = request.body
+}) 
 
-    let novoFilme = {
-        id: (filmesJson.length)+1, 
-        title: bodyRequest.title, 
-        description: bodyRequest.description 
-    }
-    filmesJson.push(novoFilme)
-    
-    response.status(201).send({
-        "mensagem": "filmes cadastrado com sucesso",
-        novoFilme
-    })
+
 })
-
-
-app.listen(3030, ()=>{
-    console.log("alô, pepe moreno? to na porta 3030")
+app.listen(5555, ()=>{
+console.log("O servidor está rodando na porta 5555!")
 })
