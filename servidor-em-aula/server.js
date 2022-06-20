@@ -12,7 +12,7 @@ app.use(express.json()) //faz o parseamento do body(body parser)
 app.get("/", (request, response)=>{
     response.status(200).json([
         {
-            "mensagem":"API de filmes Ghibli"
+            "mensagem":"API de filmes Gibi"
         }
     ])
 })
@@ -53,6 +53,6 @@ app.post("/filmes/cadastrar", (request,response)=>{
 })
 
 
-app.listen(3030, ()=>{
-    console.log("alô, pepe moreno? to na porta 3030")
+app.listen(6030, ()=>{
+    console.log("alô, minhas consagradas! to na porta 6030")
 })
