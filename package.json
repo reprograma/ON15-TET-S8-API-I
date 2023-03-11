@@ -1,0 +1,20 @@
+{
+  "name": "on15-tet-s8-api-i",
+  "version": "1.0.0",
+  "description": "Turma Online Todas em Tech - Back-end | Semana 8: Introdução à API: GET + POST",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brena-odwyer/ON15-TET-S8-API-I.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brena-odwyer/ON15-TET-S8-API-I/issues"
+  },
+  "homepage": "https://github.com/brena-odwyer/ON15-TET-S8-API-I#readme"
+}
